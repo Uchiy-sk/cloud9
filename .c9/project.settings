@@ -1,10 +1,17 @@
 {
+    "ace": {
+        "@tabSize": 2,
+        "@useSoftTabs": true
+    },
     "extensions": {
         "@aws.profile": "profile:default",
         "@editor.acceptSuggestionOnEnter": "on",
         "@editor.snippetSuggestions": "top",
         "@editor.suggest.preview": true,
         "@editor.suggest.showMethods": true
+    },
+    "general": {
+        "@stripws": true
     },
     "instance": {
         "@automaticShutdown": "30"
