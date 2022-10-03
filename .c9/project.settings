@@ -3,6 +3,9 @@
         "@tabSize": 2,
         "@useSoftTabs": true
     },
+    "build": {
+        "@saveall": true
+    },
     "extensions": {
         "@aws.profile": "profile:default",
         "@editor.acceptSuggestionOnEnter": "on",
