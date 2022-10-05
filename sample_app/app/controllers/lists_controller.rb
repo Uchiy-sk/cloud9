@@ -4,9 +4,9 @@ class ListsController < ApplicationController
   end
 
   def create
-    list = List.new(list_params)  # データを受け取り、インスタンスの作成
-    list.save                     # データをdbに保存
-    redirect_to '/top'            # top画面にリダイレクト
+    list = List.new(list_params)    # データを受け取り、インスタンスの作成
+    list.save                       # データをdbに保存
+    redirect_to list_path(list.id)  # top画面にリダイレクト
   end
 
   def index
@@ -14,6 +14,7 @@ class ListsController < ApplicationController
   end
 
   def show
+    @list = List.find(params[:id])  # [:id]番目の要素を取得
   end
 
   def edit

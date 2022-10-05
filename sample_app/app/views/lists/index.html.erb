@@ -3,6 +3,8 @@
 <!-- eachメゾッド で配列要素を順番に呼び出す-->
 <% @lists.each do |list| %>
   <p>タイトル</p>
-  <span><%= list.title %></span>
+  <span>
+    <%= link_to list.title, list_path(list.id) %>
+  </span>
 
 <% end %>
