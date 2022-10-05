@@ -6,7 +6,7 @@ class ListsController < ApplicationController
   def create
     list = List.new(list_params)    # データを受け取り、インスタンスの作成
     list.save                       # データをdbに保存
-    redirect_to list_path(list.id)  # top画面にリダイレクト
+    redirect_to list_path(list.id)  # list/:id画面にリダイレクト
   end
 
   def index
@@ -18,6 +18,13 @@ class ListsController < ApplicationController
   end
 
   def edit
+    @list = List.find(params[:id])
+  end
+
+  def update
+    list = List.find(params[:id])
+    list.update(list_params)
+    redirect_to list_path(list.id)
   end
 
   private # アクションとURLを非対応にして制限
